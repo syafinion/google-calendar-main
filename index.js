@@ -55,7 +55,7 @@ $.ajax({
 				data += "<div class='col-lg-4'>";
               	data +=	"<div class='card card-margin'>";
 			 	data += "<div class='card-header no-border'>";
-				data += "<h5 class='card-title'>WORQ EVENTS</h5>";
+				data += "<h5 class='card-title'><b>WORQ</b> EVENTS</h5>";
                 data += "</div>";
 				data += "<div class='card-body pt-0'>";
                 data += "<div class='widget-49'>";
@@ -69,11 +69,12 @@ $.ajax({
                 data += "<span class='widget-49-meeting-time'>" + day + ", " + startTime + " to " + endTime + "</span>";
                 data += "</div>";
                 data += "</div>";
-                data += "<ol class='widget-49-meeting-points'>";
-                data +=              "<li class='widget-49-meeting-item'>" + item[i].description + "</span></li>";
-                data +=          "</ol>";
+				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].description + "</div>";
+               // data += "<ol class='widget-49-meeting-points'>";
+                //data +=              "<li class='widget-49-meeting-item'>" + item[i].description + "</span></li>";
+               // data +=          "</ol>";
                 data +=          "<div class='widget-49-meeting-action'>";
-                data +=              "<a href='" + item[i].htmlLink + "' class='btn btn-sm btn-flash-border-primary'> Learn More </a>";
+                data +=              "<a href='" + item[i].htmlLink + "' class='btn btn-sm btn-flash-border'> Learn More </a>";
                 data +=          "</div>";
 
 				data += 		"</div>";
