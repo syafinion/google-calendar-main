@@ -4,7 +4,7 @@ var key = "AIzaSyAbGpD_qYn1WO6KLHzllI2QXiNAP3ZOeLY";
 var calendarid = "syafiq@worq.space";
 
 var today = new Date();
-
+//method GET
 $.ajax({
 	type: "GET",
 	url: encodeURI(
