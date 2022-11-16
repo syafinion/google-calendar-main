@@ -55,7 +55,7 @@ $.ajax({
 				data += "<div class='col-lg-4'>";
               	data +=	"<div class='card card-margin'>";
 			 	data += "<div class='card-header no-border'>";
-				data += "<h5 class='card-title'><b>WORQ</b> EVENTS</h5>";
+				data += "<h5 class='card-title'><span class='gradient'>WORQ</span> EVENTS</h5>";
                 data += "</div>";
 				data += "<div class='card-body pt-0'>";
                 data += "<div class='widget-49'>";
@@ -70,6 +70,7 @@ $.ajax({
                 data += "</div>";
                 data += "</div>";
 				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].description + "</div>";
+				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].location + "</div>";
                // data += "<ol class='widget-49-meeting-points'>";
                 //data +=              "<li class='widget-49-meeting-item'>" + item[i].description + "</span></li>";
                // data +=          "</ol>";
@@ -82,6 +83,9 @@ $.ajax({
                 data +=  "</div>";
 				data += "</div>";
 
+			}
+			else if (dataDate == null){
+				data += "no upcoming event";
 			}
 		}
 		$("#mycalendar").html(data);
