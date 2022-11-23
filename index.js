@@ -71,6 +71,7 @@ $.ajax({
                 data += "</div>";
 				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].description + "</div>";
 				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].location + "</div>";
+				data += "<div class='widget-49-meeting-points'><img src='" + item[i].attachments.fileUrl + "></div";
                // data += "<ol class='widget-49-meeting-points'>";
                 //data +=              "<li class='widget-49-meeting-item'>" + item[i].description + "</span></li>";
                // data +=          "</ol>";
