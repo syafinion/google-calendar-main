@@ -1,7 +1,7 @@
 //insert API key
-var key = "AIzaSyAbGpD_qYn1WO6KLHzllI2QXiNAP3ZOeLY";
+var key = "AIzaSyBnsId8y-m8HUAwa2lwsmaLC2J-A15x1NE";
 //insert calendar ID
-var calendarid = "syafiq@worq.space";
+var calendarid = "syafiqmajid286@gmail.com";
 
 var today = new Date();
 //method GET
@@ -71,7 +71,6 @@ $.ajax({
                 data += "</div>";
 				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].description + "</div>";
 				data += "<div class='widget-49-meeting-points'><i class='fa-solid fa-location-dot'></i> "  + item[i].location + "</div>";
-				data += "<div class='widget-49-meeting-points'><img src='" + item[i].attachments.fileUrl + "></div";
                // data += "<ol class='widget-49-meeting-points'>";
                 //data +=              "<li class='widget-49-meeting-item'>" + item[i].description + "</span></li>";
                // data +=          "</ol>";
@@ -84,9 +83,6 @@ $.ajax({
                 data +=  "</div>";
 				data += "</div>";
 
-			}
-			else if (dataDate == null){
-				data += "no upcoming event";
 			}
 		}
 		$("#mycalendar").html(data);
