@@ -95,14 +95,14 @@ $.ajax({
                 data += "</div>";
                 data += "</div>";
                 data += "<ul class='list-group list-group-flush'>";
-                data += "<li class='list-group-item'>" + item[i].location + "</li>";
+                data += "<li class='list-group-item'><p>" + item[i].description + "</p></li>";
+                data += "<li class='list-group-item'><p><i class='fa-solid fa-location-dot'></i> " + item[i].location + "<a href='" + locationLink + "'> (Map)</a></p></li>";
+                data += "<li class='list-group-item'><p>" + item[i].description + "</p></li>";
                 data += "</ul>";
                 data += "<a href='" + item[i].htmlLink + "' class='btn btn-sm btn-flash-border'> Learn More </a>";
-                data += "<a href='" + locationLink + "' class='btn btn-sm btn-flash-border'> Map </a>";
                 data += "</div>";
                 data += "</div>";
                 data += "</div>";		
-
 			}
 		}
 		$("#mycalendar").html(data);
