@@ -342,6 +342,8 @@ p {
 
   /* LEARN MORE BUTTON */
 .btn{
+    margin-left: 50px;
+    margin-bottom: 40px;
     width:150px;
     height:35px;
     border-radius:45px;

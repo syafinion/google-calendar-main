@@ -1,0 +1,23 @@
+<form id="form1">
+    <label>Input:</label>
+    <input type="text" id="input1">
+  </form>
+  
+  <form id="form2">
+    <label>Input:</label>
+    <input type="text" id="input2">
+  </form>
+
+  <script>
+    const input1 = document.getElementById('input1');
+const input2 = document.getElementById('input2');
+
+input1.addEventListener('input', () => {
+  input2.value = input1.value;
+});
+
+input2.addEventListener('input', () => {
+  input1.value = input2.value;
+});
+
+  </script>

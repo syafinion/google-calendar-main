@@ -3,8 +3,6 @@ var key = "AIzaSyBnsId8y-m8HUAwa2lwsmaLC2J-A15x1NE";
 //insert calendar ID
 var calendarid = "syafiqmajid286@gmail.com";
 
-
-
 //insert API key
 //var key = "AIzaSyAbGpD_qYn1WO6KLHzllI2QXiNAP3ZOeLY";
 //insert calendar ID
@@ -63,6 +61,16 @@ $.ajax({
 				var enddater = moment(item[i].end.dateTime).format(
 					"dddd, MMMM Do YYYY, h:mm a"
 				);
+
+                var SdateOnly = moment(item[i].start.dateTime).format(
+                    "Do MMMM YYYY"
+                );
+
+                var EdateOnly = moment(item[i].end.dateTime).format(
+                    "Do MMMM YYYY"
+                );
+
+
                 var day = moment(item[i].end.dateTime).format(
 					"dddd"
 				);
@@ -82,35 +90,26 @@ $.ajax({
 				var endTime = moment(item[i].end.dateTime).format(
 					"h:mm a"
 				);
-				data += "<div class='col-md-6 col-lg-4'>";
-                data += "<div class='card'>";
-                data += "<div class='card-header'>";
-                data += "<h5 class='card=title'><span class='gradient'>WORQ</span> Events</h5>";
-                data += "</div>";
+
+
+                data += "<div class='card mb-4'>";
+                data += "<div class='img-container'>";
                 if(imageUrl!=""){
-                	data += "<img class='card-img-top img-fluid' src='"+imageUrl+"'>";
+                	data += "<img class='image card-img-top' src='"+imageUrl+"'>";
                 }
+                data += "<div class='overlay'>";
+                data += "<button class='btn btn-outline-secondary btn-sm'><i class='fas fa-cart-plus mr-2'></i>Add To Calendar</button>";
+                data += "</div>";
+                data += "</div>";
+
                 data += "<div class='card-body'>";
-                data += "<div class='widget-49'>";
-                data += "<div class='widget-49-title-wrapper'>";
-                data += "<div class='widget-49-date-primary'>";
-                data += "<span class='widget-49-date-day'>" + startDay + "</span>";
-				data += "<span class='widget-49-date-month'>" + startMonth + "</span>";
-                data += "</div>";
-				data += "<div class='widget-49-meeting-info'>";
-                data += "<span class='widget-49-pro-title'>" + item[i].summary + "</span>";
-                data += "<span class='widget-49-meeting-time'>" + day + ", " + startTime + " to " + endTime + "</span>";
+                data += "<h5 class='card-title'>" + item[i].summary + "</h5>";
+                data += "<h6 class='card-subtitle mb-2 text-muted'>" + SdateOnly + " , " + startTime + " - " + endTime + "</h6>";
+                data += "<p class='card-text'><i class='fa-solid fa-location-dot'></i> " + item[i].location + "</p><h6><a href='" + locationLink + "'> (Map)</a></h6>";
                 data += "</div>";
                 data += "</div>";
-                data += "</div>";
-                data += "<ul class='list-group list-group-flush'>";
-                data += "<li class='list-group-item'><p>" + item[i].description + "</p></li>";
-                data += "<li class='list-group-item'><p><i class='fa-solid fa-location-dot'></i> " + item[i].location + "</p><h6><a href='" + locationLink + "'> (Map)</a></h6></li>";
-                data += "</ul>";
-                data += "<a href='" + item[i].htmlLink + "' class='btn btn-sm btn-flash-border text-center'> Learn More </a>";
-                data += "</div>";
-                data += "</div>";
-                data += "</div>";		
+				
+				
 			}
 		}
 		$("#mycalendar").html(data);
