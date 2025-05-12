@@ -1,7 +1,7 @@
 //insert API key
 var key = "API KEY"
 //insert calendar ID
-var calendarid = "syafiqmajid286@gmail.com";
+var calendarid = "@gmail.com";
 
 //insert API key
 //var key = "AIzaSyAbGpD_qYn1WO6KLHzllI2QXiNAP3ZOeLY";
